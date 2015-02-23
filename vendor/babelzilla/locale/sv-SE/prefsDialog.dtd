@@ -1,0 +1,32 @@
+<!-- General window controls -->
+<!ENTITY window.title.v2 "Inställningar för Mozilla Archive Format">
+<!-- Main pane -->
+<!ENTITY pane.main.label "Allmänt">
+<!ENTITY save.namingstrategy.grouplabel "För det föreslagna filnamnet:">
+<!ENTITY save.namingstrategy.standard.label "Använd webbläsarens standardstrategi för namngivning">
+<!ENTITY save.namingstrategy.standard.accesskey "w">
+<!-- Interface pane -->
+<!ENTITY pane.interface.label "Gränssnitt">
+<!ENTITY menu.grouplabel "Visa Mozilla Archive Format-menyobjekt i:">
+<!ENTITY menu.app.label "$brandShortName-menyn">
+<!ENTITY menu.app.accesskey "m">
+<!ENTITY menu.file.label "Arkiv-menyn">
+<!ENTITY menu.file.accesskey "i">
+<!ENTITY menu.tools.label "Verktyg-menyn">
+<!ENTITY menu.tools.accesskey "y">
+<!ENTITY menu.pagecontext.label "Sidans snabbmeny">
+<!ENTITY menu.pagecontext.accesskey "d">
+<!ENTITY menu.pagecontext.tabs.label "Visa menyobjekt för att spara flikar">
+<!ENTITY menu.pagecontext.tabs.accesskey "f">
+<!ENTITY menu.tabscontext.label "Flikfältets snabbmeny">
+<!ENTITY menu.tabscontext.accesskey "ä">
+<!-- File associations pane. This pane is visible only on Windows. -->
+<!ENTITY pane.actions.label "Åtgärder">
+<!ENTITY action.convertsavedpages.label "Konvertera sparade sidor">
+<!ENTITY action.convertsavedpages.description "&quot;Konverteringsguiden för sparade sidor&quot; guidar dig igenom konverteringen av dina tidigare sparade webbsidor till ett annat filformat.">
+<!ENTITY action.showwelcomepage.label "Visa välkomstsidan">
+<!ENTITY action.showwelcomepage.description "Välkomstsidan visas den första gången som det här tillägget installeras och ger en överblick över dess funktioner. Att visa sidan igen är framför allt användbart för översättare som vill kontrollera kvaliteten på sitt arbete.">
+<!ENTITY action.showwelcomepageassociate.label "Uppdatera filassociationer">
+<!ENTITY action.showwelcomepageassociate.description "Från välkomstsidan kan du välja vilka webbarkivfiltyper som du vill öppna med $brandShortName, och uppdatera filassociationerna ifall de har ändrats av ett annat program.">
+<!ENTITY action.visitwebsite.label "Besök webbplatsen">
+<!ENTITY action.visitwebsite.description "Mozilla Archive Format integreras sömlöst med $brandShortName och tillhandahåller ett flertal förbättringar utöver de mest synliga funktionerna. För en genomgripande beskrivning av funktionerna, information om filformatet MAFF och dokumentation över avancerade konfigurationsalternativ, kan du gå till den officiella webbplatsen.">

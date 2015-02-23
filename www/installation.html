@@ -1,0 +1,156 @@
+<!-- MAIN CONTENT -->
+<div class="maf-column-outer">
+  <div class="maf-column-left">
+    <div class="maf-column-contents">
+
+<h2>Installation</h2>
+<div class="maf-box">
+  <div class="maf-box-icon">
+    <p class="maf-box-title"><a
+     href="https://addons.mozilla.org/downloads/latest/212/addon-212-latest.xpi?src=external-mozdev-installation">Install
+     Mozilla Archive Format</a></p>
+    <p class="maf-box-text">For Firefox and SeaMonkey.</p>
+  </div>
+</div>
+<p class="maf-box-after">This link downloads the most recent version available
+ at the <a href="https://addons.mozilla.org/addon/212">Mozilla Add-ons</a>
+ website. This version is updated less frequently, tested more extensively, and
+ fully translated in several languages.</p>
+<div class="maf-box maf-preview">
+  <?php if ($maf_experimental_fx) { ?>
+  <p class="maf-box-title"><a
+   href="http://downloads.mozdev.org/maf/maf-<?php echo $maf_experimental_fx; ?>.0-fx.xpi">Try
+   Mozilla Archive Format <?php echo $maf_experimental_fx; ?></a></p>
+  <p class="maf-box-text">This preview has more
+   <a href="#whatsnew">features</a> than the previous version.</p>
+  <?php } else { ?> 
+  <p class="maf-box-title"><a
+   href="http://downloads.mozdev.org/maf/maf-<?php echo $maf_latest_fx; ?>.0-fx.xpi">Install
+   from the Preview Channel</a></p>
+  <p class="maf-box-text">You will get new versions as soon as they are
+   available.</p>
+  <?php } ?>
+</div>
+<p class="maf-box-after">This link downloads the add-on from this website, where
+ new versions are published as soon as they are available. If you download from
+ this link, you will get new features sooner, although at first they will be
+ available only in English.</p>
+
+<h2>Compatibility</h2>
+<p>Mozilla Archive Format, at the time of each release, is tested and verified
+ with the most recent browser versions available in the following release
+ channels:</p>
+<ul>
+  <li><b>Firefox Beta</b></li>
+  <li><b>Firefox Release</b></li>
+  <li><b>SeaMonkey Beta</b></li>
+  <li><b>SeaMonkey Release</b></li>
+</ul>
+<p>Testing is done under Windows XP, but the add-on is expected to work on all
+ the platforms supported by the browser. Note that the add-on is not expected to
+ be compatible with the Nightly channel, though partial compatibility might be
+ implemented for the Aurora channel.</p>
+
+<h3>File format compatibility</h3>
+<p>MAFF files are standard ZIP files that can be extracted and read with any
+ browser and operating system. For an overview of browser support for the MHTML
+ format, see the <a href="http://en.wikipedia.org/wiki/MHTML">summary on
+ Wikipedia</a>.</p>
+
+<h3>Add-on compatibility</h3>
+<p>Mozilla Archive Format is also written to be compatible with the largest
+ number of other browser add-ons, with few known exceptions for older or
+ unmaintained add-ons. In addition, Mozilla Archive Format is routinely tested
+ together with other <a href="documentation.html#extensions">compatible
+ extensions</a> on the latest version of Firefox. If you find out a case of
+ incompatibility, you can report it through the
+ <a href="feedback.html">feedback page.</a></p>
+
+<h2>License and copyright</h2>
+<p>The Mozilla Archive Format extension for Firefox has been created by
+ Christopher Ottley and is now actively developed by Paolo Amadini. Mozilla
+ Archive Format also includes code from the Save Complete extension, created by
+ Stephen Augenstein. The latest version of the add-on is available under a
+ <a href="http://www.mozilla.org/MPL/">MPL 1.1+, GPL 2.0+, LGPL 2.1+</a>
+ disjunctive tri-license. Previous versions of the add-on and individual source
+ files may be available under different Open Source licenses. See the
+ <a href="source.html">source code</a> for more information.</p>
+
+    </div>
+  </div>
+  <div class="maf-column-right">
+    <div class="maf-column-contents">
+
+<h2><a name="whatsnew"></a>What's new in the latest version?</h2>
+<p>MAF <?php echo ($maf_experimental_fx ? $maf_experimental_fx :
+ $maf_latest_fx); ?> has the following user-visible improvements over MAF
+ <?php echo $maf_previous_fx; ?>:</p>
+<ul>
+  <li>Improved compactness when saving complete web pages:
+    <ul>
+      <li>Stylesheet rules that don't apply to any element in the current page
+       are now removed from the saved file. This can greatly increase
+       compactness when content is modified by scripts or other extensions
+       before saving.</li>
+      <li>The option to take an exact snapshot of the page is now selected by
+       default, to take advantage of various improvements in the save method,
+       even if it was deselected in a previous version of the add-on. The
+       browser's standard save system and the integrated Save Complete component
+       can still be selected from the options dialog and the internal
+       configuration settings respectively.</li>
+    </ul>
+  </li>
+  <li>The notification bar with information about the original save date and
+   location can now be disabled from the options.</li>
+  <li>Now file associations on Windows are created correctly when using the
+   add-on in third-party browsers based on Firefox or SeaMonkey.</li>
+  <li>Removed elements:
+    <ul>
+      <li>The option to display an archive information icon in the status bar is
+       not available anymore, together with the option to display the icon in
+       the location bar at all times. The icon can only be displayed in the
+       location bar when an archived page is opened.</li>
+      <li>The creation of MHTML files that are fully compatible with other
+       browsers cannot be explicitly disabled anymore. All the generated MHTML
+       files are now fully compatible, as long as the option to take an exact
+       snapshot of the page is selected.</li>
+    </ul>
+  </li>
+</ul>
+<p><a href="changelog.html#whatwasnew">What was new in the previous
+ version?</a></p>
+<h2>Known issues</h2>
+<p>MAF <?php echo ($maf_experimental_fx ? $maf_experimental_fx :
+ $maf_latest_fx); ?> has the following known issues:</p>
+<ul>
+  <li>In order to open MHTML files when the
+   <a href="https://addons.mozilla.org/firefox/addon/1419">IE Tab</a> extension
+   is installed, the filter <tt>/^file:\/\/\/.*\.(mht|mhtml)$/</tt> must be
+   disabled from the IE Tab options.</li>
+  <li>The <a href="https://addons.mozilla.org/firefox/addon/25">Download
+   Sort</a> extension has a known incompatibility with MAF. The conflict cannot
+   be resolved without proper modifications to both extensions, and Download
+   Sort is not actively maintained at this time.</li>
+  <li>The integrated
+   <a href="https://addons.mozilla.org/firefox/addon/4723">Save Complete</a>
+   extension cannot always save pages with dynamic contents correctly.</li>
+  <li>When saving multiple tabs in an archive, the save operation fails if the
+   tabs are closed before the operation is completed.</li>
+  <li>When saving a page in an archive fails, retrying the download from the
+   <b>Downloads</b> window does not achieve the expected result.</li>
+  <li>Opening very long documents contained inside MHTML files may cause the
+   browser to stop responding temporarily.</li>
+</ul>
+
+<h2>Previous versions and source code</h2>
+<p>You can download all the previous versions of MAF from the
+ <a href="https://www.mozdev.org/projects/overview/maf/">project page</a>. The
+ <a href="changelog.html">changelog</a> for all the old versions is also
+ available. Source code for the released versions can be found in the XPI
+ installation files, and can be read using any ZIP extractor. Source code for
+ the development versions of MAF can be accessed from the
+ <a href="source.html">source code page</a>.
+
+    </div>
+  </div>
+</div>
